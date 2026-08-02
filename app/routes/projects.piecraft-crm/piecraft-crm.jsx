@@ -52,10 +52,11 @@ export const PieCraftCrm = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={`${sprTexture} 800w, ${sprTextureLarge} 1920w`}
-              width={800}
-              height={500}
-              placeholder={sprTexturePlaceholder}
+              src="/static/piecraft-crm.png"
+              srcSet="/static/piecraft-crm.png 1920w"
+              width={1920}
+              height={1080}
+              placeholder="/static/piecraft-crm.png"
               alt="PieCraft Marketing CRM dashboard displaying lead pipeline analytics and client interaction history."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
