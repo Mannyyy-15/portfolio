@@ -77,6 +77,8 @@ export const loader = async ({ request, context }) => {
   );
 };
 
+import { Maintenance } from '~/layouts/maintenance/maintenance';
+
 export default function App() {
   let { canonicalUrl, theme } = useLoaderData();
   const fetcher = useFetcher();
@@ -118,19 +120,7 @@ export default function App() {
       </head>
       <body data-theme={theme}>
         <ThemeProvider theme={theme} toggleTheme={toggleTheme}>
-          <Progress />
-          <VisuallyHidden showOnFocus as="a" className={styles.skip} href="#main-content">
-            Skip to main content
-          </VisuallyHidden>
-          <Navbar />
-          <main
-            id="main-content"
-            className={styles.container}
-            tabIndex={-1}
-            data-loading={state === 'loading'}
-          >
-            <Outlet />
-          </main>
+          <Maintenance />
         </ThemeProvider>
         <ScrollRestoration />
         <Scripts />

@@ -1,0 +1,99 @@
+.maintenance {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--textTitle);
+  padding: var(--space2XL) var(--spaceL);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spaceS);
+  padding: 8px 16px;
+  background: color-mix(in lab, #e63946 15%, transparent);
+  border: 1px solid color-mix(in lab, #e63946 40%, transparent);
+  border-radius: 20px;
+  color: #ff4d5a;
+  font-size: var(--fontSizeBodyS);
+  font-weight: var(--fontWeightMedium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--spaceXL);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff4d5a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff4d5a;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: var(--fontWeightBold);
+  line-height: 1.1;
+  margin-bottom: var(--spaceL);
+  max-width: 800px;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-size: var(--fontSizeBodyL);
+  color: var(--textBody);
+  max-width: 620px;
+  line-height: 1.6;
+  margin-bottom: var(--space2XL);
+}
+
+.card {
+  background: color-mix(in lab, var(--text) 4%, transparent);
+  border: 1px solid color-mix(in lab, var(--text) 10%, transparent);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: var(--spaceXL);
+  max-width: 540px;
+  width: 100%;
+  margin-bottom: var(--space2XL);
+}
+
+.cardTitle {
+  font-size: var(--fontSizeBodyM);
+  font-weight: var(--fontWeightBold);
+  margin-bottom: var(--spaceS);
+  color: var(--textTitle);
+}
+
+.cardText {
+  font-size: var(--fontSizeBodyS);
+  color: var(--textBody);
+  margin-bottom: var(--spaceL);
+}
+
+.socials {
+  display: flex;
+  gap: var(--spaceM);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footerNote {
+  font-size: var(--fontSizeBodyS);
+  color: var(--textLight);
+  margin-top: auto;
+  opacity: 0.6;
+}
