@@ -177,14 +177,14 @@ export const Home = () => {
         sectionRef={projectFive}
         visible={visibleSections.includes(projectFive.current)}
         index={5}
-        title="Wavyn Music Android Player"
-        description="Sleek Android audio streaming application built in Kotlin with ExoPlayer, fluid gestures, and audio visualizer."
+        title="The Unknown Band Platform"
+        description="Official music band portal featuring live concert schedules, media discography, member gallery, and ticket booking."
         buttonText="View project"
-        buttonLink="/projects/wavyn-music"
+        buttonLink="/projects/theunknownband"
         model={{
           type: 'image',
-          image: '/static/wavyn-music.png',
-          alt: 'Wavyn Music mobile player screen',
+          image: '/static/theunknownband.png',
+          alt: 'The Unknown Band live web interface',
         }}
       />
       <ProjectSummary

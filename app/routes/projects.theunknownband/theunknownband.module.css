@@ -1,0 +1,37 @@
+.band {
+  --accent: #e63946;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space2XL);
+
+  @media (max-width: 1040px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spaceL);
+}
+
+.card {
+  background: color-mix(in lab, var(--text) 5%, transparent);
+  border: 1px solid color-mix(in lab, var(--text) 10%, transparent);
+  border-radius: 8px;
+  padding: var(--spaceL);
+}
+
+.cardTitle {
+  font-weight: var(--fontWeightBold);
+  color: var(--textTitle);
+  margin-bottom: var(--spaceS);
+}
+
+.cardDesc {
+  font-size: var(--fontSizeBodyS);
+  color: var(--textBody);
+}
