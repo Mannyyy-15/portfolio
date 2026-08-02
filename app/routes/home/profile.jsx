@@ -18,16 +18,13 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hello Otaku's" start={visible} delay={500} />
+      <DecoderText text="Hello Everyone" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Manthan, currently I live in India working as a Front-End Developer at{' '}
-      <Link href="https://www.psmcodes.com">Psmcodes.co</Link>. My projects include Web Development, Web Apps , UI
-      | UX, etc .My coding skills enable me to rapidly prototype and validate ideas. Explore the tools and technologies I use to bring creative concepts to life.
-      Checkout my <Link href="/uses">uses page</Link>.
+      I’m Manthan Sawant, a full-stack & WebGL developer based in India. I specialize in building enterprise SEO-optimized web applications, interactive 3D WebGL tools, full-fledged CRMs, and real-time mobile platforms.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to play football, play video games, and watch Anime's. I’m always excited to hear about new projects, so don’t hesitate to reach out!
+      My stack includes React, Next.js, Three.js, TypeScript, Kotlin, and Node.js. In my spare time, I love playing football, gaming, and exploring emerging web tech. Check out my <Link href="/uses">uses page</Link> or view my featured projects below!
     </Text>
   </Fragment>
 );

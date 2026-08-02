@@ -1,0 +1,47 @@
+.mittron {
+  grid-template-rows: auto 1fr auto;
+}
+
+.columns {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space2XL);
+}
+
+@media (max-width: 1024px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spaceL);
+  margin-top: var(--spaceXL);
+}
+
+@media (max-width: 696px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--colorBackgroundLight);
+  border: 1px solid var(--colorTextSubtle);
+  border-radius: var(--borderRadiusM);
+  padding: var(--spaceL);
+}
+
+.cardTitle {
+  font-size: var(--fontSizeHeading3);
+  font-weight: bold;
+  color: var(--colorTextTitle);
+  margin-bottom: var(--spaceS);
+}
+
+.cardDesc {
+  font-size: var(--fontSizeBodyS);
+  color: var(--colorTextSubtle);
+  line-height: 1.5;
+}

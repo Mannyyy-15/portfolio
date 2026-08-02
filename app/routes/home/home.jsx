@@ -41,8 +41,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
-    description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
+    title: 'Full-Stack & Web3D Developer',
+    description: `Portfolio of ${config.name} — Full-Stack Developer specializing in enterprise web applications, 3D WebGL experiences, and mobile apps.`,
   });
 };
 
@@ -56,7 +56,13 @@ export const Home = () => {
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [
+      intro,
+      projectOne,
+      projectTwo,
+      projectThree,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -80,10 +86,10 @@ export const Home = () => {
     );
 
     sections.forEach(section => {
-      sectionObserver.observe(section.current);
+      if (section.current) sectionObserver.observe(section.current);
     });
 
-    indicatorObserver.observe(intro.current);
+    if (intro.current) indicatorObserver.observe(intro.current);
 
     return () => {
       sectionObserver.disconnect();
@@ -103,13 +109,13 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="D.G. Sports Club Academy"
+        description="Enterprise SEO-optimized sports academy portal in Virar, Maharashtra featuring interactive programs and high performance."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/dg-sports-club"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'D.G. Sports Club web application interface',
           textures: [
             {
               srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
@@ -124,21 +130,17 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title="YatriSync Commuter Transit"
+        description="Smart travel & transit synchronization platform enabling real-time commuter assistance and multi-modal routing."
+        buttonText="View project"
+        buttonLink="/projects/yatrisync"
         model={{
-          type: 'phone',
-          alt: 'App login screen',
+          type: 'laptop',
+          alt: 'YatriSync transit sync web interface',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
@@ -148,13 +150,13 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="3D Model Colorizer Studio"
+        description="Interactive WebGL 3D browser tool enabling real-time model custom coloring, shader materials, and lighting controls."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="/projects/3d-model-colorizer"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: '3D Model Colorizer Three.js canvas viewport',
           textures: [
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
@@ -163,6 +165,7 @@ export const Home = () => {
           ],
         }}
       />
+
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
