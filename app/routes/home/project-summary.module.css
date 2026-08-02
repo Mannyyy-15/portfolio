@@ -275,3 +275,28 @@
     opacity: 1;
   }
 }
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: opacity 1s ease 0.3s, transform 1s ease 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+
+  &[data-visible='true'] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}

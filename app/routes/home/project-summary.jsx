@@ -101,6 +101,11 @@ export function ProjectSummary({
   function renderPreview(visible) {
     return (
       <div className={styles.preview}>
+        {model.type === 'image' && model.image && (
+          <div className={styles.imageWrapper} data-visible={visible}>
+            <img src={model.image} alt={model.alt} className={styles.projectImage} />
+          </div>
+        )}
         {model.type === 'laptop' && (
           <>
             {renderKatakana('laptop', visible)}

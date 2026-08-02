@@ -1,15 +1,3 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
-import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -53,6 +41,15 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
+  const projectFive = useRef();
+  const projectSix = useRef();
+  const projectSeven = useRef();
+  const projectEight = useRef();
+  const projectNine = useRef();
+  const projectTen = useRef();
+  const projectEleven = useRef();
+  const projectTwelve = useRef();
   const details = useRef();
 
   useEffect(() => {
@@ -61,6 +58,15 @@ export const Home = () => {
       projectOne,
       projectTwo,
       projectThree,
+      projectFour,
+      projectFive,
+      projectSix,
+      projectSeven,
+      projectEight,
+      projectNine,
+      projectTen,
+      projectEleven,
+      projectTwelve,
       details,
     ];
 
@@ -110,18 +116,13 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="D.G. Sports Club Academy"
-        description="Enterprise SEO-optimized sports academy portal in Virar, Maharashtra featuring interactive programs and high performance."
+        description="Enterprise SEO-optimized sports academy portal in Virar, Maharashtra featuring interactive training programs and student metrics."
         buttonText="View project"
         buttonLink="/projects/dg-sports-club"
         model={{
-          type: 'laptop',
+          type: 'image',
+          image: '/static/dg-sports-club.png',
           alt: 'D.G. Sports Club web application interface',
-          textures: [
-            {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
         }}
       />
       <ProjectSummary
@@ -135,14 +136,9 @@ export const Home = () => {
         buttonText="View project"
         buttonLink="/projects/yatrisync"
         model={{
-          type: 'laptop',
+          type: 'image',
+          image: '/static/yatrisync.png',
           alt: 'YatriSync transit sync web interface',
-          textures: [
-            {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
         }}
       />
       <ProjectSummary
@@ -155,14 +151,149 @@ export const Home = () => {
         buttonText="View project"
         buttonLink="/projects/3d-model-colorizer"
         model={{
-          type: 'laptop',
-          alt: '3D Model Colorizer Three.js canvas viewport',
-          textures: [
-            {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
+          type: 'image',
+          image: '/static/3d-model-colorizer.png',
+          alt: '3D Model Colorizer viewport screen',
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="PieCraft Marketing CRM"
+        description="Full-featured enterprise agency CRM engineered to automate client lead funnels, campaign analytics, and lead scoring."
+        buttonText="View project"
+        buttonLink="/projects/piecraft-crm"
+        model={{
+          type: 'image',
+          image: '/static/piecraft-crm.png',
+          alt: 'PieCraft CRM dashboard view',
+        }}
+      />
+      <ProjectSummary
+        id="project-5"
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
+        index={5}
+        title="Wavyn Music Android Player"
+        description="Sleek Android audio streaming application built in Kotlin with ExoPlayer, fluid gestures, and audio visualizer."
+        buttonText="View project"
+        buttonLink="/projects/wavyn-music"
+        model={{
+          type: 'image',
+          image: '/static/wavyn-music.png',
+          alt: 'Wavyn Music mobile player screen',
+        }}
+      />
+      <ProjectSummary
+        id="project-6"
+        alternate
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
+        index={6}
+        title="ApexWatch System Monitoring"
+        description="Intelligent Python-powered watchdog framework for infrastructure telemetry, metric tracking, and alert triggers."
+        buttonText="View project"
+        buttonLink="/projects/apexwatch"
+        model={{
+          type: 'image',
+          image: '/static/apexwatch.png',
+          alt: 'ApexWatch telemetry dashboard',
+        }}
+      />
+      <ProjectSummary
+        id="project-7"
+        sectionRef={projectSeven}
+        visible={visibleSections.includes(projectSeven.current)}
+        index={7}
+        title="Mumbai Bazar E-Commerce Platform"
+        description="Full-stack TypeScript local marketplace enabling local Mumbai vendors with instant catalog discovery and cart checkout."
+        buttonText="View project"
+        buttonLink="/projects/mumbai-bazar"
+        model={{
+          type: 'image',
+          image: '/static/mumbai-bazar.png',
+          alt: 'Mumbai Bazar marketplace interface',
+        }}
+      />
+      <ProjectSummary
+        id="project-8"
+        alternate
+        sectionRef={projectEight}
+        visible={visibleSections.includes(projectEight.current)}
+        index={8}
+        title="Apex GUM Platform"
+        description="Modern Web Platform for Apex Global Utilities featuring fluid animations, high performance, and responsive UI."
+        buttonText="View project"
+        buttonLink="/projects/apex-gum"
+        model={{
+          type: 'image',
+          image: '/static/apex-gum.png',
+          alt: 'Apex GUM web application screen',
+        }}
+      />
+      <ProjectSummary
+        id="project-9"
+        sectionRef={projectNine}
+        visible={visibleSections.includes(projectNine.current)}
+        index={9}
+        title="Chaat Lounge Web & Ordering"
+        description="Vibrant restaurant web platform for Chaat Lounge with interactive food menus, online ordering, and table booking."
+        buttonText="View project"
+        buttonLink="/projects/chaat-lounge"
+        model={{
+          type: 'image',
+          image: '/static/chaat-lounge.png',
+          alt: 'Chaat Lounge digital dining menu',
+        }}
+      />
+      <ProjectSummary
+        id="project-10"
+        alternate
+        sectionRef={projectTen}
+        visible={visibleSections.includes(projectTen.current)}
+        index={10}
+        title="FragileBase Resilient Data Engine"
+        description="Fault-tolerant database synchronization engine with zero-loss transaction logging and encrypted payload transport."
+        buttonText="View project"
+        buttonLink="/projects/fragilebase"
+        model={{
+          type: 'image',
+          image: '/static/fragilebase.png',
+          alt: 'FragileBase data sync dashboard',
+        }}
+      />
+      <ProjectSummary
+        id="project-11"
+        sectionRef={projectEleven}
+        visible={visibleSections.includes(projectEleven.current)}
+        index={11}
+        title="Mittron Ice Cream Parlor"
+        description="Artisanal ice cream website featuring a dynamic flavor carousel, nutritional specs, outlet locator, and pre-orders."
+        buttonText="View project"
+        buttonLink="/projects/mittron-icecream"
+        model={{
+          type: 'image',
+          image: '/static/mittron-icecream.png',
+          alt: 'Mittron Ice Cream showcase website',
+        }}
+      />
+      <ProjectSummary
+        id="project-12"
+        alternate
+        sectionRef={projectTwelve}
+        visible={visibleSections.includes(projectTwelve.current)}
+        index={12}
+        title="The PieCraft Digital Agency (thepiecraft.in)"
+        description="Official web development and digital marketing agency platform featuring interactive service showcases and client funnels."
+        buttonText="View project"
+        buttonLink="/projects/thepiecraft-dev"
+        model={{
+          type: 'image',
+          image: '/static/thepiecraft-dev.png',
+          alt: 'The PieCraft digital agency website',
         }}
       />
 
